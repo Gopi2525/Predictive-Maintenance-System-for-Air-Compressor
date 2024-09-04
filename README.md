@@ -1,1 +1,1 @@
-# Predictive-Maintenance-System-foe-Air-Compressor
+# Predictive-Maintenance-System-for-Air-Compressor
