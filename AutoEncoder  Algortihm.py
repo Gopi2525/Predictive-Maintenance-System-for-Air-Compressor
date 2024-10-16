@@ -6,8 +6,8 @@ import serial
 import time
 import Adafruit_IO
 from Adafruit_IO import RequestError,Client,Feed
-ADAFRUIT_IO_USERNAME='aakash11'
-ADAFRUIT_IO_KEY='aio_jRZS08cfjvCtkoTDpFLJjJ5k5Ojx'
+ADAFRUIT_IO_USERNAME='Username'
+ADAFRUIT_IO_KEY='KEY'
 aio=Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 
 def load_data(file_path, columns):
@@ -62,7 +62,7 @@ def reconstruction(test_instance):
     formatted_errors = ', '.join(['{:.6f}'.format(err) for err in reconstruction_errors])
     return formatted_values, formatted_errors
 
-file_path = r"C:\Users\aakas\OneDrive\Desktop\Copy of CDP_Dataset(1).csv"
+file_path = r"filepath"
 selected_columns = ['outlet_temperature','outlet_pressure','vibration']
 epochs = 1000
 batch_size = 32
@@ -77,7 +77,7 @@ print("Threshold:", threshold)
 
 while True:
 
-    ser = serial.Serial('COM5', 115200)  # Replace 'COMX' with your port
+    ser = serial.Serial('COM port number (COM3)',  "replace it wtih your baud rate" )  # Replace 'COMX' with your port
     time.sleep(2)  # Allow time for serial connection to initialize
     sensor_data = str(ser.readline().strip(), 'utf-8', errors='ignore')
     sensor_values = list(map(float, sensor_data.split(',')))  
