@@ -5,10 +5,6 @@ import numpy as np
 import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 
-
-
-
-
 # Read the dataset
 data = pd.read_csv(r'filepath')
 
@@ -21,9 +17,6 @@ k = 4
 clf = KNeighborsClassifier(n_neighbors=k)
 # Train the classifier on the data
 clf.fit(X, y)
-
-
-
 
 # Open the serial port
 with serial.Serial('COM3', 115200) as ser:
